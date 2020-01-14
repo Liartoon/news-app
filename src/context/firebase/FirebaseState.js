@@ -2,7 +2,7 @@ import React, {useReducer} from 'react'
 import axios from 'axios'
 import {FirebaseReducer} from './FirebaseReducer'
 import {FirebaseContext} from './FirebaseContext'
-import {SHOW_LOADER, SHOW_NULL_DATA, GET_NEWS, REMOVE_NEWS} from '../types'
+import {SHOW_LOADER, SHOW_NULL_DATA, GET_NEWS} from '../types'
 
 const db_url=process.env.REACT_APP_DB_DATA
 
