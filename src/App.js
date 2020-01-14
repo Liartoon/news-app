@@ -7,9 +7,11 @@ import {NewsPage} from './pages/NewsPage';
 import {NavBar} from './components/NavBar';
 
 import {AlertState} from './context/alert/AlertState';
+import {FirebaseState} from './context/firebase/FirebaseState'
 
 function App() {
   return (
+    <FirebaseState>
           <AlertState>
             <BrowserRouter>
             <NavBar />
@@ -20,7 +22,10 @@ function App() {
             </Switch>
             </BrowserRouter>
           </AlertState>
+    </FirebaseState>
   );
 }
 
 export default App;
+
+// Added Loader component and axios support
