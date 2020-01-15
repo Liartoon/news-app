@@ -29,3 +29,11 @@ label{
 .header {
   color: black;
 }
+
+.col-6 {
+  padding: 30px;
+}
+
+.errMsg {
+  text-align: center;
+}

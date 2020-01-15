@@ -7,7 +7,7 @@ export const NavBar = () =>
 { 
     return (
       <nav className="navbar navbar-expand-sm bg-light">
-        <div className="navbar-brand">Test app</div>
+        <div className="navbar-brand">News app</div>
   <ul className="navbar-nav">
     <li className="nav-item">
       <NavLink className="nav-link" to="/">Main page</NavLink>

@@ -1,17 +1,36 @@
 import React, {useContext} from 'react';
 import {AlertContext} from '../context/alert/AlertContext'
+import {FirebaseContext} from '../context/firebase/FirebaseContext'
 
 export const Form = () => 
 { 
     const data = {header: '',
                         text: ''}
     const alert = useContext(AlertContext)
-
+    const firebase = useContext(FirebaseContext)
      
 
     const submitHandler = (e) => {
         e.preventDefault()
-        alert.show("Congrats! Your news has been created", "success")
+        if(data.header.length!=0 && data.text!=0)
+        {
+            firebase.addNews(data.header,data.text)
+            alert.show("Congrats! Your news has been created", "success")
+            setTimeout(() => {
+                alert.hide()
+                window.location.reload()
+            }, 2000)
+            
+        }
+        else
+        {
+            alert.show("Wrong input. Try again", "danger")
+            setTimeout(() => {
+                alert.hide()
+                window.location.reload()
+            }, 2000)
+        }
+        
     }
 
 

@@ -27,5 +27,3 @@ function App() {
 }
 
 export default App;
-
-// Added Loader component and axios support
