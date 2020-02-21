@@ -7,12 +7,13 @@ import { Loader } from '../components/Loader';
 
 export const Main = () => 
 { 
-  const {loading, news, getAllNews} = useContext(FirebaseContext)  
+  const {loading, news, getAllNews, showLoader} = useContext(FirebaseContext)  
   
-    useEffect(() =>
-    {
-      getAllNews()
-    }, [])
+  useEffect(() =>
+  {
+    showLoader()
+    getAllNews()
+  }, [])
     return (
       
     <Fragment>

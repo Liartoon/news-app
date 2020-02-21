@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {NavLink} from 'react-router-dom';
 
-
+import {FirebaseContext} from '../context/firebase/FirebaseContext'
 
 export const NewsPage = (props) => 
 { 
-    const data = props.location.state[0]
-    
+    const {one_news, getNewsById} = useContext(FirebaseContext)
+    let data = {
+        header: "",
+        text:""
+    }
+
+    getNewsById(props.match.params.newsId)
+
+    data = {...one_news}
+
 
     return (
-        
         <div className="container-fluid">
             <div className="row">
                 <div className="col-3" />
@@ -25,9 +32,6 @@ export const NewsPage = (props) =>
                 <div className="col-3" />
             </div>
         </div>
-        
-
-
     )
 
 }

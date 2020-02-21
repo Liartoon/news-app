@@ -1,4 +1,4 @@
-import {SHOW_LOADER, SHOW_NULL_DATA, ADD_NEWS, GET_NEWS} from '../types'
+import {SHOW_LOADER, SHOW_NULL_DATA, ADD_NEWS, GET_NEWS, GET_ONE_NEWS} from '../types'
 
 const handlers = {
     [SHOW_LOADER]: state => ({...state, loading: true}),
@@ -7,6 +7,10 @@ const handlers = {
     ...state,
     news: [...state.news, payload]
 }),
+    [GET_ONE_NEWS]: (state, {payload}) => (
+    {...state, 
+    one_news: payload
+    }),
     [GET_NEWS]: (state, {payload}) => (
         {...state, 
         news: payload,
