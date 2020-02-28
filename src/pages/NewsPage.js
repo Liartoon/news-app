@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {FirebaseContext} from '../context/firebase/FirebaseContext'
@@ -10,8 +10,11 @@ export const NewsPage = (props) =>
         header: "",
         text:""
     }
-
-    getNewsById(props.match.params.newsId)
+    useEffect(() =>
+    {
+        getNewsById(props.match.params.newsId)
+    }, [])
+    
 
     data = {...one_news}
 

@@ -21,7 +21,7 @@ export const Main = () =>
       loading 
         ? <Loader />
         : (news.length == 0 
-          ?  <ErrorPage />
+          ?  <ErrorPage errMsg="There is no news"/>
           : <News news={news}/>)
       }
     

@@ -61,8 +61,9 @@ export const FirebaseState = ({children}) =>
             header: header,
             text: text
         }
-        
-        await axios.post(`${db_url}/news.json`,news)
+        let idVal = Date.now().toString() + (Math.floor(Math.random() * 1000 % 899 + 100)).toString()
+
+        await axios.put(`${db_url}/news/${idVal}.json`,news)
     }
 
     return (

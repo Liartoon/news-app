@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {AlertContext} from '../context/alert/AlertContext'
 import {FirebaseContext} from '../context/firebase/FirebaseContext'
 
-export const Form = () => 
+export const NewsForm = () => 
 { 
     const data = {header: '',
                         text: ''}

@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Form} from '../components/Form';
+import {NewsForm} from '../components/NewsForm';
 import {Alert} from '../components/Alert';
 
 export const CreateNews = () => 
@@ -7,7 +7,7 @@ export const CreateNews = () =>
     return (
     <Fragment>
     <Alert />
-    <Form />
+    <NewsForm />
     </Fragment>
 )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ErrorPage = () => 
+export const ErrorPage = (props) => 
 { 
     
     return (
@@ -10,7 +10,7 @@ export const ErrorPage = () =>
                 <div className="col-3" />
                 <div className="col-6">
                 <h3 className="errMsg">
-                There is no news
+                {props.errMsg}
                 </h3>
                 </div>
                 <div className="col-3" />
